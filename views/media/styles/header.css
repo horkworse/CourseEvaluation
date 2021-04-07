@@ -1,0 +1,58 @@
+header {
+	background-color: black;
+	margin: 44px auto;
+	max-width: 85%;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: space-around;
+}
+
+header .menu-top {
+	list-style-type: none;
+}
+
+header .menu-top li {
+	display: inline-block;
+	margin-right: 75px;
+}
+
+header .menu-top li a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+
+header .statistics {
+	background-color: rgba(38, 255, 164, 0.5);;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 10px;
+}	
+
+header .surveys {
+	background-color:rgba(68, 101, 87, 0.5);
+	padding: 10px;
+	border-radius: 5px;
+	margin: 10px;
+}
+
+header .surveys:hover {
+	background-color:rgba(38, 255, 164, 0.5);
+}
+
+header .contribution {
+	background-color:rgba(68, 101, 87, 0.5);
+	padding: 10px;
+	border-radius: 5px;
+	margin: 10px;
+}
+
+header .contribution:hover {
+	background-color:rgba(38, 255, 164, 0.5);
+}
