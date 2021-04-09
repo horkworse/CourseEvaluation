@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="media/styles/header.css">
-<link rel="stylesheet" href="media/styles/style_for_all_pages.css">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+	<title>Главная</title>
+	<link rel="stylesheet" href="media/styles/header.css">
+	<!-- если ты хочешь добавить общие стили для всех страниц, то лучше использовать имя common.css  -->
+	<link rel="stylesheet" href="media/styles/style_for_all_pages.css">
+	<!-- зачем дублировать одно и тоже? -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<!-- Аня, Сема, обратите внимание: нижний тег позволяет включить оптимизацию под мобилки и соответственно верстать под них -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
 </head>
+<!-- любой блок по БЭМу должен иметь класс вне зависимости от тега (кроме тегов html и body) -->
 <header>
+
+	<!-- 
+		методология бэм гласит, что есть блок с типом block, внутри него есть элементы block__element и у элементов есть модификатор modifier
+		если блоки имеет одни и теже стили, то стоит им повесить соответствующий класс или модификатор
+		в данном случае у тебя 3 кнопки, которые по идее должны называться menu-top__link, но названия разные. Поменять
+		как делать элементы активными
+		(чтобы, когда заходишь на главную, подсвечивалась "главная", на опросы соответственно "опросы")
+		делаешь класс active и ему вешаешь стили на цвет, вот пример модификатора
+		и еще момент, если ты написала menu-top, то соответственно у тебя будут еще менюшки
+		можно всем дать общий класс menu, а верхнему сделать модификатор top или menu_top
+		соответственно нижнему сделать bottom или menu_bottom
+	 -->
 	<ul class="menu-top">
 		<li class="surveys">
 			<a href="#">Опросы</a>
@@ -19,6 +37,22 @@
 			<a href="#">Ваш вклад</a>
 		</li>
 	</ul>
+	<!--
+		в идеале так:
+		<ul class="menu-top">
+			<li class="menu-top__item surveys">
+				<a href="#" class="menu-top__link"></a>
+			</li>
+			<li class="menu-top__item statistics">
+				<a href="#" class="menu-top__link"></a>
+			</li>
+			<li class="menu-top__item contribution">
+				<a href="#" class="menu-top__link"></a>
+			</li>
+		</ul>
+		все принципе бэма реализовывать не нужно, подсказки выше просто упращают верстку
+		если название menu-top__item тебе кается большим, можно его вполне сократить menu-top__it
+	-->
 </header>
 <body>
 	

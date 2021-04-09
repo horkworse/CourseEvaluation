@@ -1,3 +1,5 @@
+
+/* не привязывайся к тегам, стили вешай на классы */
 header {
 	background-color: black;
 	margin: 44px auto;
@@ -10,15 +12,22 @@ header {
 	justify-content: space-around;
 }
 
+/* не привязывайся к тегам, стили вешай на классы */
+/* чем меньше уровень вложенности, тем проще разобраться с кодом верстки */
 header .menu-top {
 	list-style-type: none;
 }
 
+/* не привязывайся к тегам, стили вешай на классы */
+/* чем меньше уровень вложенности, тем проще разобраться с кодом верстки */
 header .menu-top li {
 	display: inline-block;
 	margin-right: 75px;
 }
 
+/* не привязывайся к тегам, стили вешай на классы */
+/* чем меньше уровень вложенности, тем проще разобраться с кодом верстки */
+/* нужно стараться использоать меньший уровень вложенности */
 header .menu-top li a {
 	display: block;
 	text-decoration: none;
@@ -27,7 +36,8 @@ header .menu-top li a {
 	font-weight: 600;
 }
 
-
+/* не привязывайся к тегам, стили вешай на классы */
+/* дублирование общих стилей */
 header .statistics {
 	background-color: rgba(38, 255, 164, 0.5);;
 	padding: 10px;
@@ -35,6 +45,8 @@ header .statistics {
 	margin: 10px;
 }	
 
+/* не привязывайся к тегам, стили вешай на классы */
+/* дублирование общих стилей */
 header .surveys {
 	background-color:rgba(68, 101, 87, 0.5);
 	padding: 10px;
@@ -42,10 +54,13 @@ header .surveys {
 	margin: 10px;
 }
 
+/* не привязывайся к тегам, стили вешай на классы */
 header .surveys:hover {
 	background-color:rgba(38, 255, 164, 0.5);
 }
 
+/* не привязывайся к тегам, стили вешай на классы */
+/* дублирование общих стилей */
 header .contribution {
 	background-color:rgba(68, 101, 87, 0.5);
 	padding: 10px;
@@ -53,6 +68,7 @@ header .contribution {
 	margin: 10px;
 }
 
+/* не привязывайся к тегам, стили вешай на классы */
 header .contribution:hover {
 	background-color:rgba(38, 255, 164, 0.5);
 }
