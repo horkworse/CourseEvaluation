@@ -1,10 +1,11 @@
 const express = require("express");
-const connect = require("./connection");
+const connection = require("./connection");
 const app = express();
 
-connect.connection__connect();
-connect.connection__execute();
-connect.connection__end();
+let sqlParam = "select Surname, First_name from Users;";
+connection.connect();
+connection.execute(sqlParam);
+connection.end();
 
 /*app.get("/", function(request, response){
 
