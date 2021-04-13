@@ -21,7 +21,7 @@ html, body {
 	align-items: center;
 }
 
-.main__shadow {
+.main_shadow {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -30,7 +30,7 @@ html, body {
 	background-color: rgba(255, 135, 236, 0.7);
 }
 
-.main__content {
+.main_content {
 	width: 900px;
 	text-align: center;
 	position: relative;
@@ -41,7 +41,7 @@ html, body {
 	transform: scaleY(-1); 
 }
 
-.main__caption {
+.main_caption {
 	font-family: Sansation;
 	font-size: 70px;
 	font-style: normal;
