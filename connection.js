@@ -1,34 +1,36 @@
 const mysql = require("mysql2");
+const config = require("./config");
+
 const connection = mysql.createConnection({
-  host: "82.202.172.211",
-  port: "3316",
-  user: "u106227_ca",
-  database: "u106227_ce",
-  password: "bW1cI0oG4xeW7h"
+    host: config.db.host,
+    port: config.db.port,
+    user: config.db.user,
+    database: config.db.database,
+    password: config.db.password
 });
 
-
-exports.connection__connect = () => {connection.connect(function(err) {
-    if (err) {
-      console.log("Ошибка: " + err.message);
-    }
-    console.log("Подключение к серверу MySQL успешно установлено");
+exports.connect = () => {
+    connection.connect((err) => {
+        if (err) {
+          console.log("Ошибка: " + err.message);
+        }
+        console.log("Подключение к серверу MySQL успешно установлено");
  })};
- 
 
-exports.connection__execute = () => {connection.execute("select Surname, First_name from Users;",
-  function(err, results, fields) {
-    if (err) {
-      console.log("Ошибка: " + err.message);
-    }
-    console.log(JSON.stringify(results));
-    return JSON.stringify(results);
+exports.execute = (sqlParam) => {
+    connection.execute(sqlParam,
+    (err, results, fields) => {
+        if (err) {
+          console.log("Ошибка: " + err.message);
+        }
+        console.log(JSON.stringify(results));
+        return JSON.stringify(results);
 })};
 
-
-exports.connection__end = () => {connection.end(function(err) {
-  if (err) {
-    console.log("Ошибка: " + err.message);
-  }
-  console.log("Подключение закрыто");
+exports.end = () => {
+    connection.end((err) => {
+        if (err) {
+            console.log("Ошибка: " + err.message);
+        }
+        console.log("Подключение закрыто");
 })};
