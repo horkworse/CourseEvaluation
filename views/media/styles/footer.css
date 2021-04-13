@@ -34,6 +34,11 @@
 	max-width: 22,5%;
 }
 
+i {
+	color: #e6e6e6;
+	padding: 0 6px 0 0;
+}
+
 .title {
 	margin:0 0 25px 0; 
 	padding:0; 
@@ -60,8 +65,11 @@
 	color: #53743F;
 }
 
+.nospace {
+	color: #666666;
+}
+
 .str {
 	height: 100%;
 	width: 100%;
 }
-
