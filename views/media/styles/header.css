@@ -42,13 +42,10 @@
 	background-color:rgba(38, 138, 255, 0.5);
 }
 
-.user {
+.menu-top_user {
 	position: absolute;
 	right: 10px;
 	font-size: 10pt;
-}
-
-.user {
 	color: #fff;
 }
 
@@ -57,7 +54,7 @@ i {
 	padding: 0 6px 0 0;
 }
 
-.title {
+.page-name {
 	list-style-type: none;
 	padding: 0 0 0 80px;
 	display: -webkit-flex;
@@ -68,7 +65,7 @@ i {
 	justify-content: space-around;
 }
 
-.title_link {
+.page-name_link {
 	padding: 20px 0;
 	display: flex;
 	justify-content: space-around;

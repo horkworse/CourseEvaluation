@@ -1,23 +1,26 @@
 .sidebar {
-	background-color: rgba(193.8, 214.2, 214.03, 0.5);
 	margin: 44px 40px;
 	padding: 20px 0px;
-	max-width: 15%;
+	max-width: 12%;
 	display: -webkit-flex;
 	display: -ms-flex;
 	display: flex;
 	flex-direction: column;
 	align-items: baseline;
 	justify-content: space-around;
-}
-
-.sidebar {
 	list-style-type: none;
 }
 
 .subject {
 	display: inline-block;
+	width: 100%;
 	margin-right: 75px;
+	background-color: rgba(38, 138, 255, 0.5);
+	text-align: center;
+	padding: 10px;
+	border-radius: 5px;
+	margin: 10px;
+
 }
 
 .sidebar_link {
@@ -25,26 +28,18 @@
 	display: block;
 	text-decoration: none;
 	color: black;
-	font-size: 18px;
-	font-weight: 600;
+	font-size: 16px;
+	font-weight: 400;
+}	
+
+.subject:hover {
+	display: inline-block;
+	width: 100%;
+	margin-right: 75px;
+	background-color: rgba(38, 138, 255, 0.7);
+	text-align: center;
 }
 
-.sidebar .subject {
-	padding: 10px;
-	border-radius: 5px;
-	margin: 10px;
-}	
-
 .sidebar_link:hover {
-	color: red;
-	-webkit-transition:color .4s ease;
-	-o-transition:color .4s ease;
-	transition:color .4s ease;
-}	
-
-.sidebar .surveys {
-	background-color:rgba(68, 101, 87, 0.5);
-	padding: 10px;
-	border-radius: 5px;
-	margin: 10px;
+	font-weight: 1000;
 }
