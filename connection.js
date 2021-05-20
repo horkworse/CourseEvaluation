@@ -7,7 +7,7 @@ const connection = mysql.createConnection({
     user: config.db.user,
     database: config.db.database,
     password: config.db.password
-});
+}).promise();
 
 exports.connect = () => {
     connection.connect((err) => {
@@ -17,6 +17,8 @@ exports.connect = () => {
         console.log("Подключение к серверу MySQL успешно установлено");
  })};
 
+
+/*первоначальная версия
 exports.execute = (sqlParam) => {
     connection.execute(sqlParam,
     (err, results, fields) => {
@@ -26,6 +28,16 @@ exports.execute = (sqlParam) => {
         console.log(JSON.stringify(results));
         return JSON.stringify(results);
 })};
+*/
+
+//возвращает промис
+exports.query = (sqlParam) => {
+    let a = connection.query(sqlParam)
+    .them(results => {
+        return JSON.stringify(result[0]);
+    })
+    return a;
+};
 
 exports.end = () => {
     connection.end((err) => {

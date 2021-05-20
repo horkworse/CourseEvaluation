@@ -24,11 +24,12 @@ connection.connect();
 
 //главная
 
-/*
-фио
-let fullName = "select  Surname, First_name, Patronymic from Users where id = 1";
-connection.execute(fullName);
-*/
+
+
+//let fullName = "select  Surname, First_name, Patronymic from Users where id = 1";
+//let a = connection.query(fullName);
+//console.log(a);
+
 
 /*
 //опросы пользователя (пройденные) в виде id
