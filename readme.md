@@ -33,9 +33,10 @@
 	Наличие баузера.
 
 Структура:
-	json — зависимости. 
-	Views => html-файлы.
-	Views => media => styles => css-файлы.
-	Views => media => styles => fonts => стиль текста. 
-	Views => media => skripts => скрипт.
-	Views => media => images => использованные изображения. 
+(Даня, пиши тут, до перехода в папки)
+json — зависимости. 
+Views => html-файлы.
+Views => media => styles => css-файлы.
+Views => media => styles => fonts => стиль текста. 
+Views => media => skripts => скрипт.
+Views => media => images => использованные изображения. 
