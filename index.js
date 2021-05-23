@@ -25,9 +25,11 @@ connection.connect();
 //главная
 
 
+let a = [];
+let fullName = "select  Surname, First_name, Patronymic from Users where id = 1";
+await connection.query(fullName).then(x => a = x);
+console.log(a);
 
-//let fullName = "select  Surname, First_name, Patronymic from Users where id = 1";
-//let a = connection.query(fullName);
 //console.log(a);
 
 

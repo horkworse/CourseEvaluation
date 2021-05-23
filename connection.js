@@ -18,23 +18,10 @@ exports.connect = () => {
  })};
 
 
-/*первоначальная версия
-exports.execute = (sqlParam) => {
-    connection.execute(sqlParam,
-    (err, results, fields) => {
-        if (err) {
-          console.log("Ошибка: " + err.message);
-        }
-        console.log(JSON.stringify(results));
-        return JSON.stringify(results);
-})};
-*/
-
-//возвращает промис
-exports.query = (sqlParam) => {
+exports.query = async (sqlParam) => {
     let a = connection.query(sqlParam)
-    .them(results => {
-        return JSON.stringify(result[0]);
+    .then(results => {
+        return JSON.stringify(results[0]);
     })
     return a;
 };
