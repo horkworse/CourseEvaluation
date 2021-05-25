@@ -6,28 +6,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/58d2b8d350.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="../command.js"></script>
 </head>
 <body>
 	<header class="header">
 		<ul class="menu-top">
 			<li class="menu-top_item surveys">
-				<a class="menu-top_link" href="#">Опросы</a>
+				<a class="menu-top_link" href="surveys.html">Опросы</a>
 			</li>
 			<li class="menu-top_item">
-				<a class="menu-top_link" href="#">Статистика</a>
+				<a class="menu-top_link" href="statistic.html">Статистика</a>
 			</li>
-			<li class="menu-top_item">
-				<a class="menu-top_link" href="#">Ваш вклад</a>
-			</li>
-			<li class="menu-top_user"><i class="fa fa-user" aria-hidden="true"></i>Пономарёв Семён Алексеевич</li></ul>
+			<!--<li class="menu-top_item">
+				<a class="menu-top_link" href="contribution.html">Ваш вклад</a>
+			</li>-->
+			<li id="phio" class="menu-top_user"><i class="fa fa-user" aria-hidden="true"></i>Пономарев Семён Алексеевич</li></ul>
 		</ul>
 
 		<ul class="page-name">
 			<p><h2 class="page-name_link">Опросы</h2></p>
 		</ul>
 	</header>
-
-
+	
 	<ul class="app">
 		<a href="survey_math.html"><li class="app_item">
 			<img class="app_label" src="media/images/urfu.svg">
@@ -79,8 +79,8 @@
 		</li></a>
 	</ul>
 
-	<div>
-		<!-- Вот здесь необходимо реализовать логику JS для открывающегося блока с изменением margin-bottom на 0 при открытии и на 120 при закрытии -->
+	<!--<div>
+		Вот здесь необходимо реализовать логику JS для открывающегося блока с изменением margin-bottom на 0 при открытии и на 120 при закрытии 
 		<p id="open_fnct" style="margin-bottom: 120px" onclick="open()"><i class="fa fa-chevron-down" aria-hidden="true"></i>Пройденные опросы</p>
 		<p id="clos_fnct"; style="display: none" onclick="close()">Скрыть</p>
 	    <div id="open_case" style="display: none">
@@ -135,11 +135,11 @@
 		</li></a>
 			</ul>
 		</div>
-	</div>
+	</div>-->
 
 	<footer class="footer">
 		<div class="contacts">
-	    	<h6 class="contacts title">Контакты</h6>
+	    	<div class="contacts title">Контакты</div>
 	    	<ul class="contacts_linklist nospace">
 		    	<li class="contacts_link"><i class="fa fa-map-marker"></i>
 		        	Мира 32, Екатеринбург, 
@@ -187,6 +187,5 @@
 		    </ul>
 		</div>
 	</footer>
-	<script type="text/javascript" src="../command.js"></script>
 </body>
 </html>

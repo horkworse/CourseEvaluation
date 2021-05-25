@@ -79,8 +79,8 @@ body {
 }
 
 .form {
-	margin-top: 150px;
-	margin-bottom: 150px; 
+	margin-top: 50px;
+	margin-bottom: 50px; 
 	padding: 0 30% 0 30%;
 }
 
@@ -152,11 +152,11 @@ input[type='radio']:checked {
 }
 
 .question_btn_1 {
-	padding: 24px 20px 0 80px;
+	padding: 0px 20px 0 80px;
 }
 
 .question_btn_2 {
-	padding: 24px 0 0 0;
+	padding: 0px 0 0 0;
 }
 
 .question_button_submit {
