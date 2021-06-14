@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="media/styles/statistic_page.css">
+<link rel="stylesheet" href="media/styles/statistic.css">
 <link rel="stylesheet" href="media/styles/common.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/58d2b8d350.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -26,21 +27,21 @@
 			<p><h2 class="page-name_link">Статистика</h2></p>
 		</ul>
 	</header>
-	<div class="main">
-		<sidebar class="sidebar">
-			<ul class="sidebar_item">
-				<li class="sidebar_subject">
-					<a class="sidebar_subject_link" href="#">Английский</a>
+	<div class="main_content">
+		<div class="main">
+			<sidebar class="sidebar">
+				<ul class="sidebar_item">
+					<li class="sidebar_subject">
+						<a class="sidebar_subject_link" href="#">Английский</a>
 						<ul class="sidebar_item_teacher">
 							<li class="teacher_name"><a class="teacher_name_1" href="">Иванова</a></li>
 							<li class="teacher_name"><a class="teacher_name_1" href="statistic_Ch.html">Чернова</a></li>
 							<li class="teacher_name"><a class="teacher_name_1" href="">Брицкая</a></li>
 						</ul>
-				</li>
-				<li class="sidebar_subject">
-					<a class="sidebar_subject_link" href="#">Дгм</a>
-				</li>
-				<li class="sidebar_subject">
+					</li>
+					<li class="sidebar_subject">
+						<a class="sidebar_subject_link" href="#">Дгм</a>
+					</li>
 					<li class="sidebar_subject">
 						<a class="sidebar_subject_link" href="#">Матан</a>
 						<ul class="sidebar_item_teacher">
@@ -49,30 +50,94 @@
 							<li class="teacher_name"><a class="teacher_name_1" href="">Шапарь</a></li>
 						</ul>
 					</li>
-				</li>
-				<li class="sidebar_subject">
-					<a class="sidebar_subject_link" href="#">Прога</a>
+					<li class="sidebar_subject">
+						<a class="sidebar_subject_link" href="#">Прога</a>
 						<ul class="sidebar_item_teacher">
 							<li class="teacher_name"><a class="teacher_name_1" href="">Коробицын</a></li>
 							<li class="teacher_name"><a class="teacher_name_1" href="">Шадрин</a></li>
 							<li class="teacher_name"><a class="teacher_name_1" href="statistic_Sp.html">Спиричева</a></li>
 						</ul>
+					</li>
+					<li class="sidebar_subject">
+						<a class="sidebar_subject_link" href="#">Инжа</a>
+					</li>
+					<li class="sidebar_subject">
+						<a class="sidebar_subject_link" href="#">Физика</a>
+					</li>
+					<li class="sidebar_subject">
+						<a class="sidebar_subject_link" href="#">Философия</a>
+					</li>
+					<li class="sidebar_subject">
+						<a class="sidebar_subject_link" href="#">Физ-ра</a>
+					</li>
+				</ul>
+			</sidebar>
+		</div>
+		<div class="diagram">
+			<img class="d1" src="media/images/di3.png">
+		</div>
+		<div class="stats">
+			<ul class="stats_item">
+				<li class="stats_item_mark teacher">
+					Преподаватель:
 				</li>
-				<li class="sidebar_subject">
-					<a class="sidebar_subject_link" href="#">Инжа</a>
-				</li>
-				<li class="sidebar_subject">
-					<a class="sidebar_subject_link" href="#">Физика</a>
-				</li>
-				<li class="sidebar_subject">
-					<a class="sidebar_subject_link" href="#">Философия</a>
-				</li>
-				<li class="sidebar_subject">
-					<a class="sidebar_subject_link" href="#">Физ-ра</a>
+				<li class="stats_item_mark_value_t teacher">
+					Спиричева Наталья Рахматулловна
 				</li>
 			</ul>
-		</sidebar>
+			<ul class="stats_item">
+				<li class="stats_item_mark">
+					Средняя оценка курса: 
+				</li>
+				<li class="stats_item_mark_value">
+					3.50/5
+				</li>
+			</ul>
+			<ul class="stats_item">
+				<li class="stats_item_components">
+					Оценка тех составляющей курса: 
+				</li>
+				<li class="stats_item_components_value">
+					4.50/5
+				</li>		
+			</ul>
+			<ul class="stats_item">
+				<li class="stats_item_components">
+					Оценка контрольных точек:
+				</li>
+				<li class="stats_item_components_value">
+					1.63/5
+				</li>
+			</ul>
+			<ul class="stats_item">
+				<li class="stats_item_components">
+					Оценка материалов курса: 
+				</li>
+				<li class="stats_item_components_value">
+					3.1/5
+				</li>
+			</ul>
+			<ul class="stats_item">
+				<li class="stats_item_components">
+					Оценка обратной связи:
+				</li> 
+				<li class="stats_item_mark_value"> 
+					2.25/5
+				</li>
+			</ul>
+			<ul class="stats_item">
+				<li class="stats_item_components">
+					Оценка компетентности преподавателя: 
+				</li>
+				<li class="stats_item_mark_value">
+					4.81/5
+				</li>
+			</ul>
+		</div>
 	</div>
+	<comments>
+		
+	</comments>
 	<footer class="footer">
 		<div class="contacts">
 	    	<h6 class="contacts title">Контакты</h6>
@@ -83,7 +148,6 @@
 		    	</li>
 		    	<hr noshade size="1" class="contacts_hr">
 		    	<li class="contacts_link"><i class="fa fa-phone"></i>
-		    		<!-- вот тут и на адресе я уже заебалась, хз, как поставить их в одну ровную строчку. -->
 			        +7(982)717-97-20<br> 
 			       	<pre>     +7(953)380-58-42</pre>
 			    </li>
