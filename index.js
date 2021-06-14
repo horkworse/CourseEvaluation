@@ -1,6 +1,29 @@
+const path = require('path');
 const express = require("express");
-const connection = require("./connection");
 const app = express();
+const connection = require("./connection");
+
+app.set("view engine", "hbs");
+
+connection.connect();
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get("/", (req, res) => {
+    let subjects = "SELECT Name FROM Subject_Courses";
+    connection.query(subjects)
+        .then( x => {
+            let result = [];
+            let values = JSON.parse(x);
+            values.forEach(y => result.push(y.Name));
+            res.render(`${__dirname}/public/index.hbs`, {
+                user: "Пономарев Семён Алексеевич",
+                subjects: result
+            });
+        });
+
+});
+
 
 /*главная
 - данные пользователя (фио) +
@@ -8,8 +31,8 @@ const app = express();
 - список пройденных
 статистика по определённому предмету
 - предметы (пройденные + непройденные)
-- преподаватель 
-- 5 параметров 
+- преподаватель
+- 5 параметров
 - комментарии (проверка на модерацию)
 Опрос по <дисциплина>
 - список вопросов
@@ -18,19 +41,6 @@ const app = express();
 - новости
 */
 
-
-connection.connect();
-
-
-//главная
-
-
-let a = [];
-let fullName = "select  Surname, First_name, Patronymic from Users where id = 1";
-await connection.query(fullName).then(x => a = x);
-console.log(a);
-
-//console.log(a);
 
 
 /*
@@ -94,8 +104,4 @@ connection.execute(rewiewText);
 /*
 ...
 */
-
-
-
-connection.end();
-app.listen(3000);
+app.listen(4000);

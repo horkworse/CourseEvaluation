@@ -19,9 +19,10 @@ exports.connect = () => {
 
 
 exports.query = async (sqlParam) => {
-    let a = connection.query(sqlParam)
+    let a = [];
+    await connection.query(sqlParam)
     .then(results => {
-        return JSON.stringify(results[0]);
+        a = JSON.stringify(results[0]);
     })
     return a;
 };
