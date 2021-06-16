@@ -1,5 +1,14 @@
 const path = require('path');
 const express = require("express");
+const https = require('https');
+const http = require('http');
+const fs = require('fs');
+
+const options = {
+    key: fs.readFileSync('key.pem'),
+    cert: fs.readFileSync('cert.pem')
+}
+
 const app = express();
 const connection = require("./connection");
 
@@ -24,6 +33,9 @@ app.get("/", (req, res) => {
 
 });
 
+
+http.createServer(app).listen(80);
+https.createServer(options, app).listen(443);
 
 /*главная
 - данные пользователя (фио) +
