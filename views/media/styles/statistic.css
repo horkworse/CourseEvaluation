@@ -86,17 +86,17 @@ i {
 }
 
 .main {
-	max-width: 15%;
+	max-width: 20%;
 }
 
 .sidebar {
-	max-width: 15%;
+	max-width: 20%;
 }
 
 .sidebar_item {
-	margin: 44px 40px;
+	margin: 44px 50px;
 	padding: 20px 0px;
-	max-width: 12%;
+	max-width: 15%;
 	display: flex;
 	flex-direction: column;
 	align-items: baseline;
@@ -108,12 +108,12 @@ i {
 .sidebar_subject {
 	display: inline-block;
 	width: 20%;
-	margin-right: 75px;
+	margin-right: 90px;
 	background-color: rgba(38, 138, 255, 0.5);
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	padding-right: 120px;
+	padding-right: 190px;
 	padding-left: 20px;
 	border-radius: 5px;
 	margin: 10px;
@@ -129,13 +129,17 @@ i {
 	font-weight: 400;
 }
 
+.diagram {
+	max-width: 50%;
+}
+
 .d1 {
 	padding: 75px 0 0 0;
 }	
 
 .sidebar_item_teacher {
 	display: none;
-	padding: 0 0 0 130px;
+	padding: 0 0 0 190px;
 }
 
 .teacher_name {
@@ -168,7 +172,7 @@ i {
 
 .stats {
 	position: relative;
-	padding: 150px 0 0 0;
+	padding: 150px 20px 0 20px;
 }
 
 .stats_item {
@@ -185,13 +189,13 @@ i {
 }
 
 .stats_item_mark_value {
-	font-size: 14pt;
+	font-size: 12pt;
 	padding: 0 0 0 10px;
 	font-weight: bold;
 }
 
 .stats_item_components_value {
-	font-size: 14pt;
+	font-size: 12pt;
 	padding: 0 0 0 10px;
 	font-weight: bold;
 }
